@@ -2,6 +2,9 @@
 
 ![Alt text](https://github.com/Melissaurious/NanoDesigner/blob/main/NanoDesigner_.png)
 
+NanoDesigner is an end-to-end workflow for the design and optimization of nanobodies. It integrates key stages—Structure Prediction, Docking, CDR Generation,and Side-Chain Packing—into an iterative framework based on an Expectation Maximization algorithm. Our method effectively tackles an interdependency
+challenge where accurate docking presupposes a priori knowledge of the CDR conformation, while effective CDR generation relies on accurate docking outputs to guide its design.
+
 ## Table of Contents
 - [Installation](#installation)
 - [External Tool Installation](#external-tool-installation)
