@@ -115,7 +115,8 @@ All required information for both cases should be obtained during the data downl
 
 For proof of concepts of NanoDesigner, please download and employ DiffAb or ADesigner trained models found [here](https://drive.google.com/drive/folders/1kGK3rV138lG8vQpGAtHv5oNP_a11Gr01?usp=share_link).
 
-![Alt text](https://github.com/Melissaurious/NanoDesigner/blob/main/test_cases.png)
+<img src="https://github.com/Melissaurious/NanoDesigner/blob/main/test_cases.png" alt="NanoDesigner Test Cases" width="200">
+
 
 We highly encourage to keep a constant number of total number of designs across iterations for simplicity:
 
