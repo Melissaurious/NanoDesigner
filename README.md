@@ -130,13 +130,13 @@ Rxnxk = 750 (Iteration 1)
 Nxnxk = 750 (Iteration X)
 ```
 
-### NanoDesigner test cases de novo design of 1 and 3 Nanobody CDRs with ΔG optimization objective:
+### NanoDesigner test cases:
+*De novo design escenario;
+*CDRH3 or 3CDRs design with ΔG optimization objective.*
 
 <div style="text-align: center;">
   <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/test_cases.png" alt="Alt Text" width="500">
 </div>
-
-<img src="https://github.com/Melissaurious/NanoDesigner/blob/main/test_cases.png" alt="Alt Text" width="500" style="display: block; margin: 0 auto;">
 
 
 
