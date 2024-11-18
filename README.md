@@ -105,7 +105,7 @@ NanoDesigner is an end-to-end workflow designed for both **de novo** and **optim
 bash scripts/NanoDesigner.sh your_working_directory/denovo_epitope_info/7eow_8pwh_example/7eow_8pwh_ep_1.json
 ```
 
-The workflow requires a script and a JSON file containing the necessary information for each entry. 
+The workflow requires a script and a JSON file containing the necessary information for each entry (a nanobody-antigen complex or nanobody scaffold and antigen structure). 
 
 - **De Novo Design**: In cases where the 3D structure of a nanobody-antigen complex is absent (referred to as "de novo" design), the input JSON file can be generated using the notebook `jupyter_notebooks/prepare_NanoDesigner_inputs_Denovo.ipynb`. This notebook guides you through creating a properly formatted JSON file.
 
@@ -115,6 +115,7 @@ All required information for both cases should be obtained during the data downl
 
 For proof of concepts of NanoDesigner, please download and employ DiffAb or ADesigner trained models found [here](https://drive.google.com/drive/folders/1kGK3rV138lG8vQpGAtHv5oNP_a11Gr01?usp=share_link).
 
+![Alt text](https://github.com/Melissaurious/NanoDesigner/blob/main/test_cases.png)
 
 We highly encourage to keep a constant number of total number of designs across iterations for simplicity:
 
