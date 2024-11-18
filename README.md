@@ -85,5 +85,19 @@ The `scripts` folder contains `.sh` scripts for both training and inference work
 To run the training or inference for a specific tool, execute the corresponding script as in the example:
 ```bash
 bash scripts/train_tool.sh
+```
+
+
+## NanoDesigner
+
+NanoDesigner is an end-to-end workflow designed for both **de novo** and **optimization** cases in nanobody-antigen complex design. The workflow script is located in the `scripts` folder and can be executed as follows:
+
+### Running NanoDesigner
+To run NanoDesigner, use:
+```bash
+bash scripts/NanoDesigner.sh your_working_directory/denovo_epitope_info/7eow_8pwh_example/7eow_8pwh_ep_1.json
+```
+
+
 
 
