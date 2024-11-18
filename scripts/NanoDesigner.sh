@@ -19,11 +19,11 @@ MAIN_FOLDER=./NanoDesigner/your_working_directory/ADesigner
 
 
 #NanoDesigner variables
-R=4 # Number of randomized nanobodies (Initialization step)
-N=3 # Top best mutants to proceed with to subsequent iterations
-d=30 # docked models to generate
-n=3 # top docked models to feed to inference stage
-max_iter=1
+R=50 # Number of randomized nanobodies (Initialization step)
+N=15 # Top best mutants to proceed with to subsequent iterations
+d=100 # docked models to generate
+n=5 # top docked models to feed to inference stage
+max_iter=10
 
 
 # Extract variables from config file
