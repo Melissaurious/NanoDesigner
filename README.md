@@ -38,7 +38,7 @@ The following repositories and software tools are required for NanoDesigner. Clo
 - [FoldX](https://foldxsuite.crg.eu/products#foldx)
 - [HDOCK](http://huanglab.phys.hust.edu.cn/software/hdocklite/)
 - [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n)
- dr_sasa_n Compilation:
+Compilation:
   ```bash
   cd dr_sasa_n
   mkdir build
