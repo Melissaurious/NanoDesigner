@@ -40,9 +40,9 @@ conda activate nanodesigner2
 
 ## External Tool Installation
 
-The following repositories and software tools are required for NanoDesigner. Clone them into the `NanoDesigner` directory and follow the installation steps provided in their respective repositories:
+The following repositories and software tools are required for NanoDesigner. Clone them into the `NanoDesigner` directory and follow the installation steps provided in their respective webpages:
 
-- [IgFold](https://github.com/Graylab/IgFold)
+- [IgFold](https://github.com/Graylab/IgFold) - *Trained models already included in nanodesigner1.*
 - [DockQ](https://github.com/bjornwallner/DockQ)
 - [Rosetta](https://docs.rosettacommons.org/demos/latest/tutorials/install_build/install_build)
 - [FoldX](https://foldxsuite.crg.eu/products#foldx)
