@@ -30,17 +30,29 @@ conda activate nanodesigner2
 
 ## External Tool Installation
 
-In addition to the provided Conda environments, the following external tools must be installed manually:
+The following repositories and software tools are required for NanoDesigner. Clone them into the `NanoDesigner` directory and follow the installation steps provided in their respective repositories:
 
 - [IgFold](https://github.com/Graylab/IgFold)
 - [DockQ](https://github.com/bjornwallner/DockQ)
-- [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n)
 - [Rosetta](https://docs.rosettacommons.org/demos/latest/tutorials/install_build/install_build)
 - [FoldX](https://foldxsuite.crg.eu/products#foldx)
 - [HDOCK](http://huanglab.phys.hust.edu.cn/software/hdocklite/)
+
+### Special Instructions for `dr_sasa_n`
+- [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n) is a Solvent Accessible Surface Area calculation software for biological molecules.
+- Compilation steps:
+  ```bash
+  cd dr_sasa_n
+  mkdir build
+  cd build
+  cmake ../
+  make
+
 
 ### Updating `dyMEAN/configs.py`
 After installing the tools, ensure to update the `dyMEAN/configs.py` file with the full paths to the installed tools.
 
 
 ## Set up
+
+what should be here?
