@@ -51,6 +51,11 @@ The following repositories and software tools are required for NanoDesigner. Clo
 
 After installing the tools, ensure to update the `dyMEAN/configs.py` file with the full paths to the installed tools.
 
+Source code for TMscore evatuation is at `dyMEAN/evaluation/`, please compile as:
+```bash
+g++ -static -O3 -ffast-math -lm -o evaluation/TMscore evaluation/TMscore.cpp
+```
+
 
 ## Data Download and Preprocess
 
