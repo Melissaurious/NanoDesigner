@@ -113,6 +113,9 @@ The workflow requires a script and a JSON file containing the necessary informat
 
 All required information for both cases should be obtained during the data download and preprocessing stage. Ensure the configuration files (`config_files`) are updated as needed to reflect your setup.
 
+For proof of concepts of NanoDesigner, please download and employ DiffAb or ADesigner trained models found [here](https://drive.google.com/drive/folders/1kGK3rV138lG8vQpGAtHv5oNP_a11Gr01?usp=share_link).
+
+
 We highly encourage to keep a constant number of total number of designs across iterations for simplicity:
 
 ```python
