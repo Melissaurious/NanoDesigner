@@ -2,6 +2,19 @@
 
 ![Alt text](https://github.com/Melissaurious/NanoDesigner/blob/main/NanoDesigner_.png)
 
+## Table of Contents
+- [Installation](#installation)
+- [Prerequisites](#prerequisites)
+- [Data Download and Preprocessing](#data-download-and-preprocessing)
+- [Training and Inference](#training-and-inference)
+- [Workflow Description](#workflow-description)
+- [Tools Compilation](#tools-compilation)
+- [Examples](#examples)
+- [Citation](#citation)
+- [License](#license)
+
+
+
 ## Installation 
 
 ### Create and activate the Conda environment for graph-based models
