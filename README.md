@@ -10,7 +10,7 @@
 - [NanoDesigner](#nanodesigner)
 - [Citation](#citation)
 - [License](#license)
-- [Aknowledgements](#aknowledgements)
+- [Credits](#credits)
 
 
 
@@ -108,10 +108,20 @@ All required information for both cases should be obtained during the data downl
 ## Citation
 TODO
 
-##License
+## License
 TODO
 
-##Aknowledgements
+## Credits
+
+This codebase is primarily based on the following deep learning tools. We thank the authors for their contributions:
+
+- [Diffab](https://github.com/luost26/diffab)  
+- [dyMEAN](https://github.com/THUNLP-MT/dyMEAN)  
+- [ADesigner](https://github.com/A4Bio/ADesigner) 
+
+We also acknowledge the rest of tools and software that played a crucial role in the workflow employed in this study, including [DockQ](https://github.com/bjornwallner/DockQ), [Rosetta](https://docs.rosettacommons.org/demos/latest/tutorials/install_build/install_build), [FoldX](https://foldxsuite.crg.eu/products#foldx), [HDOCK](http://huanglab.phys.hust.edu.cn/software/hdocklite/), [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n), and [IgFold](https://github.com/Graylab/IgFold).
+
+We sincerely thank the authors of these tools for their invaluable work, which made this project possible.
 
 
 
