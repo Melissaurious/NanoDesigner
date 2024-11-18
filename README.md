@@ -43,7 +43,7 @@ The following repositories and software tools are required for NanoDesigner. Clo
 - [Rosetta](https://docs.rosettacommons.org/demos/latest/tutorials/install_build/install_build)
 - [FoldX](https://foldxsuite.crg.eu/products#foldx)
 - [HDOCK](http://huanglab.phys.hust.edu.cn/software/hdocklite/)
-- [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n) - Follow the instructions in the repository to compile this tool.
+- [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n) - *Follow the instructions in the repository to compile this tool.*
 
 ### Updating `dyMEAN/configs.py`
 After installing the tools, ensure to update the `dyMEAN/configs.py` file with the full paths to the installed tools.
