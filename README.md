@@ -50,18 +50,18 @@ After installing the tools, ensure to update the `dyMEAN/configs.py` file with t
 
 ## Data Download and Preprocess
 
-To prepare the datasets required for NanoDesigner, follow these steps:
+The data download and preparation steps are necessary to replicate our data processing, filtering, and preparation for training. All required instructions are included in the provided Jupyter notebooks.
 
 ### 1. Preprocess the Data
 - Open the notebook located at `jupyter_notebooks/process_datasets.ipynb`.
-- Follow the instructions in the notebook to download and preprocess the required datasets.
+- Follow the instructions in the notebook to download and preprocess the datasets.
 
 ### 2. Split the Data
-- Once the data preprocessing is complete, open the notebook located at `jupyter_notebooks/split_data.ipynb`.
-- Use this notebook to split the data into training and testing sets.
+- Once preprocessing is complete, open the notebook at `jupyter_notebooks/split_data.ipynb`.
+- Use this notebook to split the processed data into training and testing sets.
 
 ### Notes:
-- Make sure you have [Jupyter Notebook](https://jupyter.org/install) installed. If you're unsure, you can check by running:
+- Ensure [Jupyter Notebook](https://jupyter.org/install) is installed. To check, run:
   ```bash
   jupyter --version
 
