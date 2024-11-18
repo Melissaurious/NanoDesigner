@@ -100,7 +100,7 @@ The workflow requires a script and a JSON file containing the necessary informat
 
 - **De Novo Design**: In cases where the 3D structure of a nanobody-antigen complex is absent (referred to as "de novo" design), the input JSON file can be generated using the notebook `jupyter_notebooks/prepare_NanoDesigner_inputs_Denovo.ipynb`. This notebook guides you through creating a properly formatted JSON file.
 
-- **Optimization Cases**: For existing complexes, simply select a relevant line from the dataset-generated JSON files (prepared during the [Data Download and Preprocess](#data-download-and-preprocess) stage) and use it to create an input JSON file. Follow the structure provided in the example.
+- **Optimization Cases**: For existing complexes, simply select a relevant line from the dataset-generated JSON files (prepared during the [Data Download and Preprocess](#data-download-and-preprocess) stage) and use it to create an input JSON file.
 
 All required information for both cases should be obtained during the data download and preprocessing stage. Ensure the configuration files (`config_files`) are updated as needed to reflect your setup.
 
