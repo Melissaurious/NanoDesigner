@@ -115,8 +115,6 @@ All required information for both cases should be obtained during the data downl
 
 For proof of concepts of NanoDesigner, please download and employ DiffAb or ADesigner trained models found [here](https://drive.google.com/drive/folders/1kGK3rV138lG8vQpGAtHv5oNP_a11Gr01?usp=share_link).
 
-<img src="https://github.com/Melissaurious/NanoDesigner/blob/main/test_cases.png" alt="NanoDesigner Test Cases" width="200">
-
 
 We highly encourage to keep a constant number of total number of designs across iterations for simplicity:
 
@@ -130,8 +128,15 @@ k_iteration_x = 10  # Number of predictions obtained from CDR Generation stage a
 
 Rxnxk = 750 (Iteration 1)
 Nxnxk = 750 (Iteration X)
-
 ```
+
+### NanoDesigner test cases de novo design of 1 and 3 Nanobody CDRs:
+
+<div style="text-align: center;">
+  <img src="image-url" alt="Alt Text" width="500">
+</div>
+
+
 
 ## Citation
 TODO
