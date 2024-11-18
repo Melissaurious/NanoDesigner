@@ -75,7 +75,14 @@ The `scripts` folder contains `.sh` scripts for both training and inference work
 - **Configuration**: Update the file paths and any necessary parameters inside the scripts. This includes specifying paths for datasets, output directories and additional variables.
 - **10-Fold Cross-Validation**: The scripts are pre-configured to implement a 10-fold cross-validation strategy. Refer to *-Data Download and Preprocess*.
 
-To run the training for a specific tool, execute the corresponding script as in the example:
+### 2. Inference
+- **Location**: Inference scripts for each tool are also available in the `scripts` directory.
+- **Configuration**: Make sure that the paths across the training and inference scripts match. The folder specified in the training script dictates the location of the generated checkpoints, which will be used during inference.
+- **Manual Checkpoint Selection**: For GNN-based tools, selection of the best checkpoint must be done manually. Refer to the instructions provided in the script files for guidance.
+
+
+
+To run the training or inference for a specific tool, execute the corresponding script as in the example:
 ```bash
 bash scripts/train_tool.sh
 
