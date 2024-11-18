@@ -68,15 +68,14 @@ The data download and preparation steps are necessary to replicate our data proc
 
 ## Training and Inference
 
-The `scripts` folder contains `.sh` scripts for both training and inference workflows used in the study. These scripts are configured for the tools employed in NanoDesigner and are designed to facilitate a 10-fold cross-validation setup.
+The `scripts` folder contains `.sh` scripts for both training and inference workflows used in the study. These scripts are configured for each of the tools employed in this study and are designed to facilitate a 10-fold cross-validation setup.
 
 ### 1. Training
 - **Location**: Training scripts for each tool are located in the `scripts` directory.
-- **Configuration**: Update the file paths and any necessary parameters inside the scripts to match your local environment. This includes specifying paths for datasets, output directories, and models.
-- **10-Fold Cross-Validation**: The scripts are pre-configured to implement a 10-fold cross-validation strategy.
+- **Configuration**: Update the file paths and any necessary parameters inside the scripts. This includes specifying paths for datasets, output directories and additional variables.
+- **10-Fold Cross-Validation**: The scripts are pre-configured to implement a 10-fold cross-validation strategy. Refer to *-Data Download and Preprocess*.
 
-#### Example:
-To run the training for a specific tool, execute the corresponding script:
+To run the training for a specific tool, execute the corresponding script as in the example:
 ```bash
 bash scripts/train_tool.sh
 
