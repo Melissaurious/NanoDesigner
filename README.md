@@ -119,8 +119,7 @@ This codebase is primarily based on the following deep learning tools. We thank 
 - [dyMEAN](https://github.com/THUNLP-MT/dyMEAN)  
 - [ADesigner](https://github.com/A4Bio/ADesigner) 
 
-We also acknowledge the rest of tools and software that played a crucial role in the workflow employed in this study, including [DockQ](https://github.com/bjornwallner/DockQ), [Rosetta](https://docs.rosettacommons.org/demos/latest/tutorials/install_build/install_build), [FoldX](https://foldxsuite.crg.eu/products#foldx), [HDOCK](http://huanglab.phys.hust.edu.cn/software/hdocklite/), [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n), and [IgFold](https://github.com/Graylab/IgFold).
-
+We also acknowledge the rest of tools and software that played a crucial role in the workflow employed in this study.
 We sincerely thank the authors of these tools for their invaluable work, which made this project possible.
 
 
