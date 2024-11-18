@@ -1,0 +1,21 @@
+mode: single_cdr
+model_name: DiffAb
+maximization_objective: ddg
+CDRS: H3
+initial_cdr: randomized
+model:
+  checkpoint: ./NanoDesigner/checkpoints/ADesigner_CDRH3_nanobody_clst_Ag.pt
+
+sampling:
+  seed: 2022
+  sample_structure: true
+  sample_sequence: true
+  cdrs:
+    - H_CDR3
+  num_samples_iter_1: 3
+  num_samples_iter_x: 10
+
+dataset:
+  test:
+    type: sabdab
+    split: test
