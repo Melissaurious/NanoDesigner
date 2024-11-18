@@ -37,10 +37,8 @@ The following repositories and software tools are required for NanoDesigner. Clo
 - [Rosetta](https://docs.rosettacommons.org/demos/latest/tutorials/install_build/install_build)
 - [FoldX](https://foldxsuite.crg.eu/products#foldx)
 - [HDOCK](http://huanglab.phys.hust.edu.cn/software/hdocklite/)
-
-### Special Instructions for `dr_sasa_n`
-- [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n) is a Solvent Accessible Surface Area calculation software for biological molecules.
-- Compilation steps:
+- [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n)
+ dr_sasa_n Compilation:
   ```bash
   cd dr_sasa_n
   mkdir build
