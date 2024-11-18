@@ -136,6 +136,8 @@ Nxnxk = 750 (Iteration X)
   <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/test_cases.png" alt="Alt Text" width="500">
 </div>
 
+<img src="https://github.com/Melissaurious/NanoDesigner/blob/main/test_cases.png" alt="Alt Text" width="500" style="display: block; margin: 0 auto;">
+
 
 
 ## Citation
