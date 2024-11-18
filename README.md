@@ -104,6 +104,20 @@ The workflow requires a script and a JSON file containing the necessary informat
 
 All required information for both cases should be obtained during the data download and preprocessing stage. Ensure the configuration files (`config_files`) are updated as needed to reflect your setup.
 
+We highly encourage to keep a constant number of total number of designs across iterations for simplicity:
+
+```python
+R = 50  # Number of randomized nanobodies (Initialization step)
+N = 15  # Top best mutants to proceed with to subsequent iterations
+d = 100 # Docked models to generate with Hdock
+n = 5   # Top docked models to feed to inference stage
+k_iteration_1 = 3   # Number of predictions obtained from CDR Generation stage at iteration 1
+k_iteration_x = 10  # Number of predictions obtained from CDR Generation stage at iteration x
+
+Rxnxk = 750 (Iteration 1)
+Nxnxk = 750 (Iteration X)
+
+```
 
 ## Citation
 TODO
