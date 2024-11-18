@@ -45,10 +45,14 @@ The following repositories and software tools are required for NanoDesigner. Clo
 - [HDOCK](http://huanglab.phys.hust.edu.cn/software/hdocklite/)
 - [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n) - *Follow the instructions in the repository to compile this tool.*
 
-### Updating `dyMEAN/configs.py`
 After installing the tools, ensure to update the `dyMEAN/configs.py` file with the full paths to the installed tools.
 
 
-## Set up
+## Data Download and Preprocess
 
-what should be here?
+To prepare the datasets required for NanoDesigner, follow these steps:
+
+### 1. Preprocess the Data
+Use the notebook located at `jupyter_notebooks/process_datasets.ipynb` to preprocess the datasets. Launch the notebook with the following command:
+```bash
+jupyter-notebook jupyter_notebooks/process_datasets.ipynb
