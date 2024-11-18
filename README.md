@@ -4,13 +4,13 @@
 
 ## Table of Contents
 - [Installation](#installation)
-- [Data Download and Preprocessing](#data-download-and-preprocessing)
+- [External Tool Installation](#external-tool-installation)
+- [Data Download and Preprocess](#data-download-and-preprocess)
 - [Training and Inference](#training-and-inference)
-- [Workflow Description](#workflow-description)
-- [Tools Compilation](#tools-compilation)
-- [Examples](#examples)
+- [NanoDesigner](#nanodesigner)
 - [Citation](#citation)
 - [License](#license)
+- [Aknowledgements](#aknowledgements)
 
 
 
@@ -104,6 +104,14 @@ The workflow requires a script and a JSON file containing the necessary informat
 
 All required information for both cases should be obtained during the data download and preprocessing stage. Ensure the configuration files (`config_files`) are updated as needed to reflect your setup.
 
+
+## Citation
+TODO
+
+##License
+TODO
+
+##Aknowledgements
 
 
 
