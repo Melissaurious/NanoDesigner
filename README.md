@@ -34,10 +34,10 @@ In addition to the provided Conda environments, the following external tools mus
 
 - [IgFold](https://github.com/Graylab/IgFold)
 - [DockQ](https://github.com/bjornwallner/DockQ)
-- [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n) - Solvent Accessible Surface Area calculation software for biological molecules.
+- [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n)
 - [Rosetta](https://docs.rosettacommons.org/demos/latest/tutorials/install_build/install_build)
 - [FoldX](https://foldxsuite.crg.eu/products#foldx)
-- [HDock](http://huanglab.phys.hust.edu.cn/software/hdocklite/)
+- [HDOCK](http://huanglab.phys.hust.edu.cn/software/hdocklite/)
 
 ### Updating `dyMEAN/configs.py`
 After installing the tools, ensure to update the `dyMEAN/configs.py` file with the full paths to the installed tools.
