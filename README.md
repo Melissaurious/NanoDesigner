@@ -108,7 +108,7 @@ python ./Data_download_and_processing/scripts/split_data.py \
 
 
 
-## Training and Inference
+## Inference-tool assessment
 
 We provide trained models for evaluating different training configurations (please unzip all_checkpoints.tar.gz inside the NanoDesigner directory):
 
