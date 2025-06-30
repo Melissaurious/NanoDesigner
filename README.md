@@ -141,6 +141,9 @@ To generate evaluation results:
 * `CLUSTER_THRESHOLD`: Set 95, 80 or 60 for Ag and 40, 30 or 20 for CDRH3.
 
 
+### Checkpoints
+Download the zip file from the following link and upzip it inside `./NanoDesigner`. The `./NanoDesigner/scripts/CDRH3_model_assessment.sh` will atuoamtically locate the trained checkpoints for each tool and training configuration.
+
 ### Results Analysis
 The performance metrics presented in:
 - Supplementary Material Tables 2 & 3
