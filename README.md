@@ -135,8 +135,6 @@ were generated using `NanoDesigner_2/Tool_assesment_results/generate_tables_expe
 
 
 
-**Note:** The 10-fold generated datasets, used to conduct the proof of concept for this project, can be found in [this Google Drive folder](https://drive.google.com/drive/folders/1CzBCQGvpHiBCufGCLoa15-fe9c0Mg1Xq?usp=share_link). For details on how these datasets were generated, please refer to the [Data Download and Preprocess](#data-download-and-preprocess) section.
-
 
 
 ## NanoDesigner
