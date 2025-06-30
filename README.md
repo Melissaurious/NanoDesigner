@@ -188,8 +188,8 @@ R = 50  # Number of randomized nanobodies (Initialization step)
 N = 15  # Top best mutants to proceed with to subsequent iterations
 d = 100 # Docked models to generate with Hdock
 n = 5   # Top docked models to feed to inference stage
-k_iteration_1 = 3   # Number of predictions obtained from CDR Generation stage at iteration 1
-k_iteration_x = 10  # Number of predictions obtained from CDR Generation stage at iteration x
+k_iteration_1 = 3   # Generated desings during inference at iteration 1 (pre-defined inside config files)
+k_iteration_x = 10  # Generated desings during inference at iteration x (pre-defined inside config files)
 
 Rxnxk = 750 (Iteration 1)
 Nxnxk = 750 (Iteration X)
