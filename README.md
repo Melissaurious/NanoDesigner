@@ -142,7 +142,7 @@ To generate evaluation results:
 Download the zip file from the following link [here](https://drive.google.com/drive/folders/1SZUP4ovqYtHjxIQSJ4-UoO60wW3YN-lj?usp=share_link) and upzip it inside `./NanoDesigner`. The `./NanoDesigner/scripts/CDRH3_model_assessment.sh` will autoamtically locate the trained checkpoints for each tool and training configuration.
 
 ### Results Analysis
-The performance metrics presented in:
+The performance measures presented in:
 - Supplementary Material Tables 2 & 3
 - Main Text Table 1
 
@@ -150,12 +150,19 @@ were generated using `NanoDesigner/Tool_assesment_results/generate_tables_experi
 
 
 
-
-
 ## NanoDesigner
 
 NanoDesigner is an end-to-end workflow designed for both **de novo** and **optimization** cases in nanobody-antigen complex design. The workflow script is located in each of the folders located at `./NanoDesigner/NanoDesigner_assessment_experiment_2`. 
-Please update the following files and following variables:
+
+NanoDesigner supports two distinct design approaches: **de novo** and **optimization**. All required input data is generated generated from the [Data Download and Preprocess](#data-download-and-preprocess)) stage:
+
+
+- **De Novo Design**: De novo design is used when no pre-existing nanobody-antigen complex 3D structure  is available. In this scenario, the design process assumes there is no reference complex, and the design process is guided by the maximization objective is based on ΔG (binding free energy). To assess the effectiveness of NanoDesigner in this scenario we make use of original complexes to evaluate improvement in binding energy comapred to a reference complex (ΔΔG) and compute success rate.
+
+
+- **Optimization Cases**: Optimization mode is applied when you want to improve the binding affinity of an existing nanobody based on a reference nanobody-antigen complex. This approach uses a known complex structure as the starting point, where the design and selection process is based on the maximization objective ΔΔG.
+
+To run evaluate NanoDesigner in any of these modes, please refer to `/NanoDesigner/NanoDesigner_assessment_experiment_2/` folder and update inside the bash script the following variables. Example:
 
 ```bash
 bash ./NanoDesigner/NanoDesigner_assessment_experiment_2/NanoDesigner_DiffAb_optimization/NanoDesigner_pipeline.sh PDB_ID
@@ -167,18 +174,6 @@ bash ./NanoDesigner/NanoDesigner_assessment_experiment_2/NanoDesigner_DiffAb_opt
 
 
 By given the PDB_ID as input the script will automatically look for the the input information required for our method (a json file containing all produced information during [Data Download and Preprocess](#data-download-and-preprocess)). The script also accepts a second input in case the process stops and user desire to start from the last reached iteration. 
-
-### Test Cases
-
-The workflow requires a script and a JSON file containing the necessary information for each entry (a nanobody-antigen complex or nanobody scaffold and antigen structure). 
-
-- **De Novo Design**: In cases where the 3D structure of a nanobody-antigen complex is absent (referred to as "de novo" design), the input JSON file can be generated using the notebook `jupyter_notebooks/prepare_NanoDesigner_inputs_Denovo.ipynb`. This notebook guides you through creating a properly formatted JSON file.
-
-- **Optimization Cases**: For existing complexes, simply select a relevant line from the dataset-generated JSON files (prepared during the [Data Download and Preprocess](#data-download-and-preprocess) stage) and use it to create an input JSON file.
-
-All required information for both cases should be obtained during the data download and preprocessing stage. Ensure the configuration files (`config_files`) are updated as needed to reflect your setup.
-
-For proof of concepts of NanoDesigner, please download and employ DiffAb or ADesigner trained models found [here](https://drive.google.com/drive/folders/1kGK3rV138lG8vQpGAtHv5oNP_a11Gr01?usp=share_link).
 
 
 We highly encourage to keep a constant number of total number of designs across iterations for simplicity:
@@ -194,6 +189,41 @@ k_iteration_x = 10  # Number of predictions obtained from CDR Generation stage a
 Rxnxk = 750 (Iteration 1)
 Nxnxk = 750 (Iteration X)
 ```
+
+#### Checkpoints
+For proof of concepts of NanoDesigner, please download and employ DiffAb or ADesigner trained models found [here](https://drive.google.com/drive/folders/1kGK3rV138lG8vQpGAtHv5oNP_a11Gr01?usp=share_link). These comes from the best perfoming training configuration found in experiment 1 results: Comnbined dataset Nanobodies + Antibodies, clustered based on antigen sequence similarity with a threshold of 60%.
+
+
+### Results Analysis
+The performance measures presented in:
+- Main Text Table 2
+
+were generated using `./NanoDesigner/NanoDesigner_assessment_experiment_2/generate_tables_experiment_2.ipynb`. This notebook processes the assessment outputs to produce the comparative tables in our publication.
+
+### Test Cases
+
+
+In some cases researchers may want to design a nanobody targeting an antigen of therapeutic interest for which a complex may not be available. An input preparation step is required prior running NanoDesigner. In these cases, the user can provide the desired VHH scaffold and target antigen crystal stucture sources, as well as the desired target epitope (as a sequence; the program also accept non-continues sequences e.g. "YKLV;CLL"). Chain isolation is handled for cases in which the VHH scaffold or antigen are in bound state with other proteins.
+
+In our manuscript we ran Nanodesigner for the de novo design of VHH naobodies targeting different antigens of interest:
+
+For 6LR7-4OBE and 6LR7-5LRT, please follow the instructions and run `./NanoDesigner/NanoDesigner_test_Cases/NanoDesigner_test_cases_input_prep.ipynb` notebook, it will ouput one json file per provided epitope sequence for which we recommend to place inside `./NanoDesigner/NanoDesigner_test_Cases/6lr7_5lrt` renamed as dataset.json. You can now proceed to run the pipeline as: 
+
+```bash
+bash ./NanoDesigner/NanoDesigner_test_Cases/NanoDesigner_pipeline.sh 6lr7_5lrt
+```
+
+#### Variables to update
+* `BASE_DIR`: Your working directory
+#### Files to update
+* `CONFIG`: Fiiles containing working parameters for the CDR generation at `./NanoDesigner/config_files`. Choose from the de novo alternatives.
+
+For 7EOW-8PWH, please follow the instructions and run `./NanoDesigner/NanoDesigner_test_Cases/NanoDesigner_test_cases_input_prep_HER2.ipynb` notebook, it will ouput one json file per provided epitope sequence for which we recommend to place inside `./NanoDesigner/NanoDesigner_test_Cases/7eow_8pwh` renamed as dataset.json. In this special case, the epitope is extracted analyzing the binding interface of HER2 protein bound to two monoclonal therapeutic antibodies prior chain isolation: PERTUZUMAB and TRASTUZUMAB. You can now proceed to run the pipeline as: 
+
+```bash
+bash ./NanoDesigner/NanoDesigner_test_Cases/NanoDesigner_pipeline.sh 7eow_8pwh
+```
+
 
 ### NanoDesigner test cases:
 *De novo design escenario:
