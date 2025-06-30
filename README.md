@@ -85,9 +85,8 @@ python download_and_process_data_reduced.py \
 The main result is `CDRH3_interacting_[type]_[numbering]_unique.json` containing the final filtered dataset with CDR sequences, interaction data, and epitope mappings (input for the next step).
 
 
-<div style="text-align: center;">
-  <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/combined_CDR_length_binding_paper2.png" alt="Alt Text" width="600">
-</div>
+
+![Alt text]([https://github.com/.../NanoDesigner.png](https://github.com/Melissaurious/NanoDesigner/blob/main/combined_CDR_length_binding_paper2.png)){: width="50%" }
 
 
 ### 2. Split the Data
