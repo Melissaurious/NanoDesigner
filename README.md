@@ -53,6 +53,7 @@ After installing the tools, ensure to update the `dyMEAN/configs.py` file with t
 
 Source code for TMscore evatuation is at `dyMEAN/evaluation/`, please compile as:
 ```bash
+cd dyMEAN
 g++ -static -O3 -ffast-math -lm -o evaluation/TMscore evaluation/TMscore.cpp
 ```
 
