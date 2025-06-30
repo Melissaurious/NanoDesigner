@@ -128,7 +128,7 @@ These configurations systematically assess model performance across:
 
 ### Running Assessments
 To generate evaluation results:
-1. Use `NanoDesigner_2/scripts/CDRH3_model_assessment.bash`
+1. Use `NanoDesigner/scripts/CDRH3_model_assessment.bash`
 2. Specify the required variables:
    - Working directory
    - Tool selection
