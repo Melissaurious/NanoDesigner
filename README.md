@@ -86,7 +86,7 @@ The main result is `CDRH3_interacting_[type]_[numbering]_unique.json` containing
 
 
 
-![Alt text]([https://github.com/.../NanoDesigner.png](https://github.com/Melissaurious/NanoDesigner/blob/main/combined_CDR_length_binding_paper2.png)){: width="50%" }
+![Alt text]((https://github.com/Melissaurious/NanoDesigner/blob/main/combined_CDR_length_binding_paper2.png)){: width="50%" }
 
 
 ### 2. Split the Data
