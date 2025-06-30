@@ -45,7 +45,7 @@ The following repositories and software tools are required for NanoDesigner. Clo
 - [IgFold](https://github.com/Graylab/IgFold) - *Trained models already included in nanodesigner1 conda environment.*
 - [DockQ](https://github.com/bjornwallner/DockQ)
 - [Rosetta](https://docs.rosettacommons.org/demos/latest/tutorials/install_build/install_build)
-- [FoldX](https://foldxsuite.crg.eu/products#foldx)
+- [FoldX](https://foldxsuite.crg.eu/products#foldx) - *Academic license employed.*
 - [HDOCK](http://huanglab.phys.hust.edu.cn/software/hdocklite/)
 - [dr_sasa_n](https://github.com/nioroso-x3/dr_sasa_n) - *Follow the instructions in the repository to compile this tool.*
 
