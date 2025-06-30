@@ -207,22 +207,23 @@ In some cases researchers may want to design a nanobody targeting an antigen of 
 
 In our manuscript we ran Nanodesigner for the de novo design of VHH naobodies targeting different antigens of interest:
 
-For 6LR7-4OBE and 6LR7-5LRT, please follow the instructions and run `./NanoDesigner/NanoDesigner_test_Cases/NanoDesigner_test_cases_input_prep.ipynb` notebook, it will ouput one json file per provided epitope sequence for which we recommend to place inside `./NanoDesigner/NanoDesigner_test_Cases/6lr7_5lrt` renamed as dataset.json. You can now proceed to run the pipeline as: 
+**For 6LR7-4OBE and 6LR7-5LRT**, please follow the instructions and run `./NanoDesigner/NanoDesigner_test_Cases/NanoDesigner_test_cases_input_prep.ipynb` notebook, it will ouput one json file per provided epitope sequence for which we recommend to place inside `./NanoDesigner/NanoDesigner_test_Cases/6lr7_5lrt` renamed as dataset.json. You can now proceed to run the pipeline as: 
 
 ```bash
 bash ./NanoDesigner/NanoDesigner_test_Cases/NanoDesigner_pipeline.sh 6lr7_5lrt
 ```
 
-#### Variables to update
-* `BASE_DIR`: Your working directory
-#### Files to update
-* `CONFIG`: Fiiles containing working parameters for the CDR generation at `./NanoDesigner/config_files`. Choose from the de novo alternatives.
-
-For 7EOW-8PWH, please follow the instructions and run `./NanoDesigner/NanoDesigner_test_Cases/NanoDesigner_test_cases_input_prep_HER2.ipynb` notebook, it will ouput one json file per provided epitope sequence for which we recommend to place inside `./NanoDesigner/NanoDesigner_test_Cases/7eow_8pwh` renamed as dataset.json. In this special case, the epitope is extracted analyzing the binding interface of HER2 protein bound to two monoclonal therapeutic antibodies prior chain isolation: PERTUZUMAB and TRASTUZUMAB. You can now proceed to run the pipeline as: 
+**For 7EOW-8PW**H, please follow the instructions and run `./NanoDesigner/NanoDesigner_test_Cases/NanoDesigner_test_cases_input_prep_HER2.ipynb` notebook, it will ouput one json file per provided epitope sequence for which we recommend to place inside `./NanoDesigner/NanoDesigner_test_Cases/7eow_8pwh` renamed as dataset.json. In this special case, the epitope is extracted analyzing the binding interface of HER2 protein bound to two monoclonal therapeutic antibodies prior chain isolation: PERTUZUMAB and TRASTUZUMAB. You can now proceed to run the pipeline as: 
 
 ```bash
 bash ./NanoDesigner/NanoDesigner_test_Cases/NanoDesigner_pipeline.sh 7eow_8pwh
 ```
+
+
+#### Variables to update
+* `BASE_DIR`: Your working directory
+#### Files to update
+* `CONFIG`: Fiiles containing working parameters for the CDR generation at `./NanoDesigner/config_files`. Choose from the de novo alternatives.
 
 
 ### NanoDesigner test cases:
