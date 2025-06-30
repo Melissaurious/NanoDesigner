@@ -128,12 +128,18 @@ These configurations systematically assess model performance across:
 
 ### Running Assessments
 To generate evaluation results:
-1. Use `NanoDesigner/scripts/CDRH3_model_assessment.bash`
-2. Specify the required variables:
-   - Working directory
-   - Tool selection
-   - Sequence clustering type (Ag or CDRH3)
-   - Threshold value
+```bash
+./NanoDesigner/scripts/CDRH3_model_assessment.sh
+```
+
+#### Variables to update
+* `MODEL`: Select the model to run the inference and evaluation for. Options: "dyMEAN" or "ADESIGN" or "DIFFAB".
+* `BASE_DIR`: Your working directory.
+* `FINETUNE`: Set to False if you want to evalaute either Nanobody; Nanobody_Antibody; set tot TRUE to automatically search for the fine-tuned models.
+* `TOTAL_FOLDS`: For Supplementary material tables S2 and S2 set to 0, for Main Text Table 1, set to 9.
+* `CLUSTER_TYPE`: Selet set Ag or CDRH3 depending on the sequence to cluster from.
+* `CLUSTER_THRESHOLD`: Set 95, 80 or 60 for Ag and 40, 30 or 20 for CDRH3.
+
 
 ### Results Analysis
 The performance metrics presented in:
