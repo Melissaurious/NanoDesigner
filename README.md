@@ -105,9 +105,6 @@ python ./Data_download_and_processing/scripts/split_data.py \
 * `--out_dir`: Directory to save subfodlers with generated cluster per training configuration.
 
 
-
-
-
 ## Inference-tool assessment
 
 We provide trained models for evaluating different training configurations (please unzip all_checkpoints.tar.gz inside the NanoDesigner directory):
@@ -142,7 +139,7 @@ To generate evaluation results:
 
 
 ### Checkpoints
-Download the zip file from the following link and upzip it inside `./NanoDesigner`. The `./NanoDesigner/scripts/CDRH3_model_assessment.sh` will atuoamtically locate the trained checkpoints for each tool and training configuration.
+Download the zip file from the following link [here](https://drive.google.com/drive/folders/1SZUP4ovqYtHjxIQSJ4-UoO60wW3YN-lj?usp=share_link) and upzip it inside `./NanoDesigner`. The `./NanoDesigner/scripts/CDRH3_model_assessment.sh` will atuoamtically locate the trained checkpoints for each tool and training configuration.
 
 ### Results Analysis
 The performance metrics presented in:
