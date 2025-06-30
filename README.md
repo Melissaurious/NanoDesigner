@@ -140,7 +140,7 @@ The performance metrics presented in:
 - Supplementary Material Tables 2 & 3
 - Main Text Table 1
 
-were generated using `NanoDesigner_2/Tool_assesment_results/generate_tables_experiment_1.ipynb`. This notebook processes the assessment outputs to produce the comparative tables in our publication.
+were generated using `NanoDesigner/Tool_assesment_results/generate_tables_experiment_1.ipynb`. This notebook processes the assessment outputs to produce the comparative tables in our publication.
 
 
 
