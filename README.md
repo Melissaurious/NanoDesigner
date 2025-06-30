@@ -134,7 +134,7 @@ To generate evaluation results:
 
 #### Variables to update
 * `MODEL`: Select the model to run the inference and evaluation for. Options: "dyMEAN" or "ADESIGN" or "DIFFAB".
-* `BASE_DIR`: Your working directory.
+* `BASE_DIR`: Your working directory (`./NanoDesigner/Tool_assesment_experiment_1`).
 * `FINETUNE`: Set to False if you want to evalaute either Nanobody; Nanobody_Antibody; set tot TRUE to automatically search for the fine-tuned models.
 * `TOTAL_FOLDS`: For Supplementary material tables S2 and S2 set to 0, for Main Text Table 1, set to 9.
 * `CLUSTER_TYPE`: Selet set Ag or CDRH3 depending on the sequence to cluster from.
