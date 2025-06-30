@@ -86,7 +86,7 @@ The main result is `CDRH3_interacting_[type]_[numbering]_unique.json` containing
 
 
 
-![Alt text]((https://github.com/Melissaurious/NanoDesigner/blob/main/combined_CDR_length_binding_paper2.png)){: width="50%" }
+
 
 
 ### 2. Split the Data
@@ -238,6 +238,9 @@ CDRH3 or 3CDRs design with ΔG optimization objective.
   <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/nanodesigner_test_cases_2025.png" alt="Alt Text" width="800">
 </div>
 
+<div style="text-align: center; width: 100%;">
+  <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/nanodesigner_test_cases_2025.png" alt="Alt Text" width="800" style="display: inline-block;">
+</div>
 
 
 ## Citation
@@ -256,6 +259,7 @@ This codebase is primarily based on the following deep learning tools. We thank 
 
 We also acknowledge the rest of tools and software that played a crucial role in the workflow employed in this study.
 We sincerely thank the authors of these tools for their invaluable work, which made this project possible.
+
 
 
 
