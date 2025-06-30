@@ -157,7 +157,7 @@ NanoDesigner is an end-to-end workflow designed for both **de novo** and **optim
 NanoDesigner supports two distinct design approaches: **de novo** and **optimization**. All required input data is generated generated from the [Data Download and Preprocess](#data-download-and-preprocess)) stage:
 
 
-- **De Novo Design**: De novo design is used when no pre-existing nanobody-antigen complex 3D structure  is available. In this scenario, the design process assumes there is no reference complex, and the design process is guided by the maximization objective is based on ΔG (binding free energy). To assess the effectiveness of NanoDesigner in this scenario we make use of original complexes to evaluate improvement in binding energy comapred to a reference complex (ΔΔG) and compute success rate.
+- **De Novo Design**: De novo design is used when no pre-existing nanobody-antigen complex 3D structure  is available. In this scenario, the design process assumes there is no reference complex, and the design process is guided by the maximization objective ΔG (binding free energy). To assess the effectiveness of NanoDesigner in this scenario we make use of original complexes to evaluate improvement in binding energy comapred to a reference complex (ΔΔG) and compute success rate.
 
 
 - **Optimization Cases**: Optimization mode is applied when you want to improve the binding affinity of an existing nanobody based on a reference nanobody-antigen complex. This approach uses a known complex structure as the starting point, where the design and selection process is based on the maximization objective ΔΔG.
