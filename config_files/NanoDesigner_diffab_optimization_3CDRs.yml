@@ -1,0 +1,21 @@
+mode: single_cdr
+model_name: DiffAb
+maximization_objective: optimization
+CDRS: H3 H2 H1
+initial_cdr: randomized
+model:
+  checkpoint: ./NanoDesigner/all_checkpoints/DIFFAB/Nanobody_Antibody_clustered_Ag_60_3CDRs/fold_0/200000.pt
+
+sampling:
+  seed: 2022
+  sample_structure: true
+  sample_sequence: true
+  cdrs:
+    - H_CDR3
+  num_samples_iter_1: 3 # for DiffAb inference
+  num_samples_iter_x: 10
+
+dataset:
+  test:
+    type: sabdab
+    split: test

@@ -1,0 +1,36 @@
+# Large model files and checkpoints
+
+all_checkpoints/
+
+*.ckpt
+
+*.pkl
+
+*.pth
+
+*.h5
+
+*.model
+
+*.weights
+
+*.bin
+
+*.pt
+
+# External dependencies (users should install these)
+
+# Python
+
+pycache/
+
+*.pyc
+
+*.pyo
+
+.DS_Store
+
+# Data and outputs
+
+logs/
+
