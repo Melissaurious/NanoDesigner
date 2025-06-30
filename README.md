@@ -139,7 +139,7 @@ To generate evaluation results:
 
 
 ### Checkpoints
-Download the zip file from the following link [here](https://drive.google.com/drive/folders/1SZUP4ovqYtHjxIQSJ4-UoO60wW3YN-lj?usp=share_link) and upzip it inside `./NanoDesigner`. The `./NanoDesigner/scripts/CDRH3_model_assessment.sh` will atuoamtically locate the trained checkpoints for each tool and training configuration.
+Download the zip file from the following link [here](https://drive.google.com/drive/folders/1SZUP4ovqYtHjxIQSJ4-UoO60wW3YN-lj?usp=share_link) and upzip it inside `./NanoDesigner`. The `./NanoDesigner/scripts/CDRH3_model_assessment.sh` will autoamtically locate the trained checkpoints for each tool and training configuration.
 
 ### Results Analysis
 The performance metrics presented in:
