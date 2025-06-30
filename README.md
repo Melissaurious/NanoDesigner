@@ -160,7 +160,7 @@ bash ./NanoDesigner/NanoDesigner_assessment_experiment_2/NanoDesigner_DiffAb_opt
 * `CONFIG`: Fiiles containing working parameters for the CDR generation at `./NanoDesigner/config_files`.
 
 
-By given the PDB_ID as input the script will automatically look for the the input information required for our method (a json file containing all produced information during [Data Download and Preprocess](#data-download-and-preprocess). The script also accepts a second input in case the process stops and user desire to start from the last reached iteration. 
+By given the PDB_ID as input the script will automatically look for the the input information required for our method (a json file containing all produced information during [Data Download and Preprocess](#data-download-and-preprocess)). The script also accepts a second input in case the process stops and user desire to start from the last reached iteration. 
 
 ### Test Cases
 
