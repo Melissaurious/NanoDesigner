@@ -10,7 +10,7 @@ challenge where accurate docking presupposes a priori knowledge of the CDR confo
 - [Installation](#installation)
 - [External Tool Installation](#external-tool-installation)
 - [Data Download and Preprocess](#data-download-and-preprocess)
-- [Training and Inference](#training-and-inference)
+- [Inference-tool assessment](#inference)
 - [NanoDesigner](#nanodesigner)
 - [Citation](#citation)
 - [License](#license)
@@ -65,14 +65,19 @@ The data download and preparation steps are necessary to replicate our data proc
 - Open the notebook located at `jupyter_notebooks/process_datasets.ipynb`.
 - Follow the instructions in the notebook to download and preprocess the datasets.
 
-### 2. Split the Data
-- Once preprocessing is complete, open the notebook at `jupyter_notebooks/split_data.ipynb`.
-- Use this notebook to split the processed data into training and testing sets.
 
-### Notes:
-- Ensure [Jupyter Notebook](https://jupyter.org/install) is installed. To check, run:
-  ```bash
-  jupyter --version
+### 2. Split the Data
+After downloading and preprocessing the data, use the split_data.py script to create train/validation/test splits with sequence-based clustering.
+The splitting script performs sequence similarity clustering on either CDRH3 or antigen sequences, then creates k-fold cross-validation splits ensuring that similar sequences are kept within the same split. This prevents data leakage where the model might see similar sequences during training and testing.
+#### Usage
+```bash
+python ./Data_download_and_processing/scripts/split_data.py \
+    --data_files <path_to_json_file(s)> \
+    --immuno_molecule <Antibody|Nanobody|Antibody Nanobody> \
+    --cluster_targets <CDRH3|Ag> \
+    --out_dir <output_directory> \
+```
+
 
 
 ## Training and Inference
