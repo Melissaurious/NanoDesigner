@@ -85,6 +85,11 @@ python download_and_process_data_reduced.py \
 The main result is `CDRH3_interacting_[type]_[numbering]_unique.json` containing the final filtered dataset with CDR sequences, interaction data, and epitope mappings (input for the next step).
 
 
+<div style="text-align: center;">
+  <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/combined_CDR_length_binding_paper2.png" alt="Alt Text" width="600">
+</div>
+
+
 ### 2. Split the Data
 After downloading and preprocessing the data, use the split_data.py script to create train/validation/test splits with sequence-based clustering.
 The splitting script performs sequence similarity clustering on either CDRH3 or antigen sequences, then creates k-fold cross-validation splits ensuring that similar sequences are kept within the same split. This prevents data leakage where the model might see similar sequences during training and testing.
