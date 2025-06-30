@@ -73,6 +73,17 @@ python download_and_process_data_reduced.py \
     --numbering <imgt|chothia> \
 ```
 
+#### Parameters
+* `--output_folder`: Directory for all output files (required)
+* `--type`: Structure type to analyze - `Antibody` or `Nanobody` (default: `Nanobody`)
+* `--numbering`: Numbering scheme - `imgt` or `chothia` (default: `imgt`)
+* `--max_resolution`: Maximum resolution threshold in Å (default: `4.0`)
+* `--tsv_file`: Custom SAbDab TSV file (auto-downloaded if not provided)
+* `--raw_structures_dir`: Custom PDB structures directory (auto-downloaded if not provided)
+
+#### Output
+The main result is `CDRH3_interacting_[type]_[numbering]_unique.json` containing the final filtered dataset with CDR sequences, interaction data, and epitope mappings.
+
 
 ### 2. Split the Data
 After downloading and preprocessing the data, use the split_data.py script to create train/validation/test splits with sequence-based clustering.
