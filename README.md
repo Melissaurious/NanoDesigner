@@ -62,7 +62,7 @@ g++ -static -O3 -ffast-math -lm -o evaluation/TMscore evaluation/TMscore.cpp
 The data download and preparation steps are necessary to replicate our data processing, filtering, and preparation for training. All required instructions are included in the following scripts.
 
 ### 1. Preprocess the Data
-Use the `download_and_process_data_reduced.py` script to download SAbDab structures, extract CDR information, and analyze antibody-antigen interactions.
+Use the `download_and_process_data_reduced.py` script to download SAbDab structures, extract CDR information, and analyze antibody-antigen interactions based on solvent-accessible surface area (dSASA).
 The preprocessing pipeline performs structure validation, CDR extraction, interaction analysis, and epitope mapping. It automatically handles data download, quality filtering, and generates the final dataset with mapped epitopes from CDR-antigen contacts.
 
 #### Usage
