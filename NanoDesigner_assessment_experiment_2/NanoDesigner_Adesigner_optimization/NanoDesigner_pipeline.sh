@@ -12,7 +12,7 @@ fi
 BASENAME=$1
 START_ITER=${2:-1}  # Use second argument if provided, otherwise default to 1
 
-
+BASE_DIR="./"
 PROJECT_DIR="${BASE_DIR}/NanoDesigner" 
 DYMEAN_CODE_DIR="${PROJECT_DIR}/dyMEAN"
 ADESIGNER_CODE_DIR="${PROJECT_DIR}/ADesigner"
@@ -98,7 +98,7 @@ RESULT_DIR=${SAVE_DIR}/results
 
 
 eval "$(conda shell.bash hook)"
-conda activate dymean2
+conda activate nanodesigner1
 
 
 # create folder and parent dir if needed
@@ -226,7 +226,7 @@ for ((i=START_ITER; i<=max_iter; i++)); do
 
     if [ "$MODEL" = "DiffAb" ]; then
     
-        conda activate diffab
+        conda activate nanodesigner2
 
         # conda run -n diffab python 
         python ${DYMEAN_CODE_DIR}/models/pipeline/cdr_models/NanoDesigner_diffab_inference_original.py \
@@ -245,7 +245,7 @@ for ((i=START_ITER; i<=max_iter; i++)); do
     elif [ "$MODEL" = "ADesigner" ]; then
 
 
-        conda activate dymean2
+        conda activate nanodesigner1
 
         cd $ADESIGNER_CODE_DIR
         python ${ADESIGNER_CODE_DIR}/generate_pipeline.py \
