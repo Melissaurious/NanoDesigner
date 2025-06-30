@@ -101,24 +101,38 @@ python ./Data_download_and_processing/scripts/split_data.py \
 
 ## Training and Inference
 
-The `scripts` folder contains `.sh` scripts for both training and inference workflows used in the study. These scripts are configured for each of the tools employed in this study and are designed to facilitate a 10-fold cross-validation setup.
+We provide trained models for evaluating different training configurations (please unzip all_checkpoints.tar.gz inside the NanoDesigner directory):
 
-### 1. Training
-- **Location**: Training scripts for each tool are located in the `scripts` directory.
-- **Configuration**: Update the file paths and any necessary parameters inside the scripts. This includes specifying paths for datasets, output directories and additional variables.
-- **10-Fold Cross-Validation**: The scripts are pre-configured to implement a 10-fold cross-validation strategy. Refer to *-Data Download and Preprocess*.
+**Training Data Variants:**
+- Nanobodies-only
+- Nanobodies + Antibodies
+- Antibodies fine-tuned on Nanobodies
 
-### 2. Inference
-- **Location**: Inference scripts for each tool are also available in the `scripts` directory.
-- **Configuration**: Make sure that the paths across the training and inference scripts match. The folder specified in the training script dictates the location of the generated checkpoints, which will be used during inference.
-- **Manual Checkpoint Selection**: For GNN-based tools, selection of the best checkpoint must be done manually. Refer to the instructions provided in the script files for guidance.
+**Clustering Thresholds:**
+- Antigen (Ag) sequence clustering (95%, 80%, 60%)
+- CDRH3 sequence clustering (40%, 30%, 20%)
 
+These configurations systematically assess model performance across:
+1) Different training data compositions
+2) Varying levels of structural diversity (CDRH3 loops)
+3) Different antigenic similarity levels
 
+### Running Assessments
+To generate evaluation results:
+1. Use `NanoDesigner_2/scripts/CDRH3_model_assessment.bash`
+2. Specify the required variables:
+   - Working directory
+   - Tool selection
+   - Sequence clustering type (Ag or CDRH3)
+   - Threshold value
 
-To run the training or inference for a specific tool, execute the corresponding script as in the example:
-```bash
-bash scripts/train_tool.sh
-```
+### Results Analysis
+The performance metrics presented in:
+- Supplementary Material Tables 2 & 3
+- Main Text Table 1
+
+were generated using `NanoDesigner_2/Tool_assesment_results/generate_tables_experiment_1.ipynb`. This notebook processes the assessment outputs to produce the comparative tables in our publication.
+
 
 
 **Note:** The 10-fold generated datasets, used to conduct the proof of concept for this project, can be found in [this Google Drive folder](https://drive.google.com/drive/folders/1CzBCQGvpHiBCufGCLoa15-fe9c0Mg1Xq?usp=share_link). For details on how these datasets were generated, please refer to the [Data Download and Preprocess](#data-download-and-preprocess) section.
@@ -132,6 +146,9 @@ NanoDesigner is an end-to-end workflow designed for both **de novo** and **optim
 ```bash
 bash scripts/NanoDesigner.sh your_working_directory/denovo_epitope_info/7eow_8pwh_example/7eow_8pwh_ep_1.json
 ```
+
+
+### Test Cases
 
 The workflow requires a script and a JSON file containing the necessary information for each entry (a nanobody-antigen complex or nanobody scaffold and antigen structure). 
 
@@ -159,11 +176,11 @@ Nxnxk = 750 (Iteration X)
 ```
 
 ### NanoDesigner test cases:
-*De novo design escenario;
-*CDRH3 or 3CDRs design with ΔG optimization objective.*
+*De novo design escenario:
+CDRH3 or 3CDRs design with ΔG optimization objective.
 
 <div style="text-align: center;">
-  <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/nanodesigner_test_cases_2025.png" alt="Alt Text" width="500">
+  <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/nanodesigner_test_cases_2025.png" alt="Alt Text" width="800">
 </div>
 
 
