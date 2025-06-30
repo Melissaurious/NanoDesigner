@@ -59,11 +59,19 @@ g++ -static -O3 -ffast-math -lm -o evaluation/TMscore evaluation/TMscore.cpp
 
 ## Data Download and Preprocess
 
-The data download and preparation steps are necessary to replicate our data processing, filtering, and preparation for training. All required instructions are included in the provided Jupyter notebooks.
+The data download and preparation steps are necessary to replicate our data processing, filtering, and preparation for training. All required instructions are included in the following scripts.
 
 ### 1. Preprocess the Data
-- Open the notebook located at `jupyter_notebooks/process_datasets.ipynb`.
-- Follow the instructions in the notebook to download and preprocess the datasets.
+Use the `download_and_process_data_reduced.py` script to download SAbDab structures, extract CDR information, and analyze antibody-antigen interactions.
+The preprocessing pipeline performs structure validation, CDR extraction, interaction analysis, and epitope mapping. It automatically handles data download, quality filtering, and generates the final dataset with mapped epitopes from CDR-antigen contacts.
+
+#### Usage
+```bash
+python download_and_process_data_reduced.py \
+    --output_folder <output_directory> \
+    --type <Antibody|Nanobody> \
+    --numbering <imgt|chothia> \
+```
 
 
 ### 2. Split the Data
