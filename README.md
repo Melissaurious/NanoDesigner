@@ -152,7 +152,7 @@ NanoDesigner is an end-to-end workflow designed for both **de novo** and **optim
 Please update the following files and following variables:
 
 ```bash
-bash /ibex/user/rioszemm/NanoDesigner/NanoDesigner_assessment_experiment_2/NanoDesigner_DiffAb_optimization/NanoDesigner_pipeline.sh PDB_ID
+bash ./NanoDesigner/NanoDesigner_assessment_experiment_2/NanoDesigner_DiffAb_optimization/NanoDesigner_pipeline.sh PDB_ID
 ```
 #### Variables to update
 * `BASE_DIR`: Your working directory
