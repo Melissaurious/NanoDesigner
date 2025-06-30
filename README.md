@@ -148,12 +148,19 @@ were generated using `NanoDesigner/Tool_assesment_results/generate_tables_experi
 
 ## NanoDesigner
 
-NanoDesigner is an end-to-end workflow designed for both **de novo** and **optimization** cases in nanobody-antigen complex design. The workflow script is located in the `scripts` folder and can be executed as follows:
+NanoDesigner is an end-to-end workflow designed for both **de novo** and **optimization** cases in nanobody-antigen complex design. The workflow script is located in each of the folders located at `./NanoDesigner/NanoDesigner_assessment_experiment_2`. 
+Please update the following files and following variables:
 
 ```bash
-bash scripts/NanoDesigner.sh your_working_directory/denovo_epitope_info/7eow_8pwh_example/7eow_8pwh_ep_1.json
+bash /ibex/user/rioszemm/NanoDesigner/NanoDesigner_assessment_experiment_2/NanoDesigner_DiffAb_optimization/NanoDesigner_pipeline.sh PDB_ID
 ```
+#### Variables to update
+* `BASE_DIR`: Your working directory
+#### Files to update
+* `CONFIG`: Fiiles containing working parameters for the CDR generation at `./NanoDesigner/config_files`.
 
+
+By given the PDB_ID as input the script will automatically look for the the input information required for our method (a json file containing all produced information during [Data Download and Preprocess](#data-download-and-preprocess). The script also accepts a second input in case the process stops and user desire to start from the last reached iteration. 
 
 ### Test Cases
 
