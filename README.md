@@ -84,9 +84,10 @@ python download_and_process_data_reduced.py \
 #### Output
 The main result is `CDRH3_interacting_[type]_[numbering]_unique.json` containing the final filtered dataset with CDR sequences, interaction data, and epitope mappings (input for the next step).
 
-
-
-
+_Dataset Analisis: Length and binding involvement of nanobody CDRHs_
+<div style="text-align: center;">
+  <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/combined_CDR_length_binding_paper2.png" alt="Alt Text" width="700">
+</div>
 
 
 ### 2. Split the Data
@@ -235,12 +236,9 @@ bash ./NanoDesigner/NanoDesigner_test_Cases/NanoDesigner_pipeline.sh 7eow_8pwh
 CDRH3 or 3CDRs design with ΔG optimization objective.
 
 <div style="text-align: center;">
-  <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/nanodesigner_test_cases_2025.png" alt="Alt Text" width="800">
+  <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/nanodesigner_test_cases_2025.png" alt="Alt Text" width="700">
 </div>
 
-<div style="text-align: center; width: 100%;">
-  <img src="https://github.com/Melissaurious/NanoDesigner/blob/main/nanodesigner_test_cases_2025.png" alt="Alt Text" width="800" style="display: inline-block;">
-</div>
 
 
 ## Citation
