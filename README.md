@@ -98,6 +98,15 @@ python ./Data_download_and_processing/scripts/split_data.py \
 ```
 
 
+#### Parameters
+* `--data_files`: Nanobody or/and Antibody CDRH3_interacting_[type]_imgt_unique.json (required)
+* `--immuno_molecule`: Molecule file to use to construct the clusters, if both files are provided the content will be pooled - `Antibody` or `Nanobody` or both.
+* `--cluster_targets`: Type of sequence to use for clustering based on sequence similarity
+* `--out_dir`: Directory to save subfodlers with generated cluster per training configuration.
+
+
+
+
 
 ## Training and Inference
 
