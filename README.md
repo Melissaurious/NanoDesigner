@@ -196,10 +196,10 @@ were generated using `NanoDesigner/Tool_assesment_results/generate_tables_experi
 
 NanoDesigner is an end-to-end workflow designed for both **de novo** and **optimization** cases in nanobody-antigen complex design. The workflow script is located in each of the folders located at `./NanoDesigner/NanoDesigner_assessment_experiment_2`. 
 
-NanoDesigner supports two distinct design approaches: **de novo** and **optimization**. All required input data is generated generated from the [Data Download and Preprocess](#data-download-and-preprocess)) stage:
+NanoDesigner supports two distinct design approaches: **de novo** and **optimization**. All required input data is generated from the [Data Download and Preprocess](#data-download-and-preprocess)) stage:
 
 
-- **De Novo Design**: De novo design is used when no pre-existing nanobody-antigen complex 3D structure  is available. In this scenario, the design process assumes there is no reference complex, and the design process is guided by the maximization objective ΔG (binding free energy). To assess the effectiveness of NanoDesigner in this scenario we make use of original complexes to evaluate improvement in binding energy comapred to a reference complex (ΔΔG) and compute success rate.
+- **De Novo Design**: This mode is used when no pre-existing nanobody-antigen complex 3D structure  is available. In this scenario, the design process assumes there is no reference complex, and the design process is guided by the maximization objective ΔG (binding free energy). To assess the effectiveness of NanoDesigner in this scenario we make use of original complexes to evaluate improvement in binding energy compared to a reference complex (ΔΔG) and compute success rate defined as the ratio of designs showing improved affinity values.
 
 
 - **Optimization Cases**: Optimization mode is applied when you want to improve the binding affinity of an existing nanobody based on a reference nanobody-antigen complex. This approach uses a known complex structure as the starting point, where the design and selection process is based on the maximization objective ΔΔG.
@@ -212,7 +212,7 @@ bash ./NanoDesigner/NanoDesigner_assessment_experiment_2/NanoDesigner_DiffAb_opt
 #### Variables to update
 * `BASE_DIR`: Your working directory
 #### Files to update
-* `CONFIG`: Fiiles containing working parameters for the CDR generation at `./NanoDesigner/config_files`.
+* `CONFIG`: Files containing working parameters for the CDR generation at `./NanoDesigner/config_files`. Please also update the trained model absolute path.
 
 
 By given the PDB_ID as input the script will automatically look for the the input information required for our method (a json file containing all produced information during [Data Download and Preprocess](#data-download-and-preprocess)). The script also accepts a second input in case the process stops and user desire to start from the last reached iteration. 
@@ -233,7 +233,7 @@ Nxnxk = 750 (Iteration X)
 ```
 
 #### Checkpoints
-For proof of concepts of NanoDesigner, please download and employ DiffAb or ADesigner trained models found [here](https://drive.google.com/drive/folders/1kGK3rV138lG8vQpGAtHv5oNP_a11Gr01?usp=share_link). These comes from the best perfoming training configuration found in experiment 1 results: Comnbined dataset Nanobodies + Antibodies, clustered based on antigen sequence similarity with a threshold of 60%.
+For proof of concepts of NanoDesigner, please download and employ DiffAb or ADesigner trained models found [here](https://drive.google.com/drive/folders/1kGK3rV138lG8vQpGAtHv5oNP_a11Gr01?usp=share_link). These comes from fold 0 of the best perfoming training configuration found in experiment 1 results: Comnbined dataset Nanobodies + Antibodies, clustered based on antigen sequence similarity with a threshold of 60%.
 
 
 ### Results Analysis
