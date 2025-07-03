@@ -75,11 +75,11 @@ python download_and_process_data_reduced.py \
 ```
 
 #### Parameters
-* `--output_folder`: Directory for all output files (required)
+* `--output_folder`: Directory for all output files (required). Please provide as input ./NanoDesigner/Data_download_and_processing
 * `--type`: Structure type to analyze - `Antibody` or `Nanobody` (default: `Nanobody`)
 * `--numbering`: Numbering scheme - `imgt` or `chothia` (default: `imgt`)
 * `--max_resolution`: Maximum resolution threshold in Å (default: `4.0`)
-* `--tsv_file`: Custom SAbDab TSV file (auto-downloaded if not provided)
+* `--tsv_file`: Custom SAbDab TSV file (auto-downloaded if not provided). We provide: ./NanoDesigner/Data_download_and_processing/sabdab_summary_all-5.tsv
 * `--raw_structures_dir`: Custom PDB structures directory (auto-downloaded if not provided)
 
 #### Output
@@ -93,7 +93,7 @@ _Nanobody Dataset Analisis: Length and binding involvement of nanobody CDRHs_
 
 ### 2. Split the Data
 After downloading and preprocessing the data, use the split_data.py script to create train/validation/test splits with sequence-based clustering.
-The splitting script performs sequence similarity clustering on either CDRH3 or antigen sequences, then creates k-fold cross-validation splits ensuring that similar sequences are kept within the same split. This prevents data leakage where the model might see similar sequences during training and testing.
+The splitting script performs sequence similarity clustering on either CDRH3 or antigen sequences, with [40%,30%,20%]  and [95%,80%,60%] threshoolds, respectively. Then creates k-fold cross-validation splits ensuring that similar sequences are kept within the same split. This prevents data leakage where the model might see similar sequences during training and testing.
 #### Usage
 ```bash
 python ./Data_download_and_processing/scripts/split_data.py \
@@ -113,24 +113,21 @@ python ./Data_download_and_processing/scripts/split_data.py \
 
 ## Inference-tool assessment
 
-We provide trained models for evaluating different training configurations (please unzip all_checkpoints.tar.gz inside the NanoDesigner directory):
+We provide trained models for dyMEAN, ADesigner and DiffAb, one or multiple folds for evaluating different training configurations in this link [here](https://drive.google.com/drive/folders/1SZUP4ovqYtHjxIQSJ4-UoO60wW3YN-lj?usp=share_link). Please create a directory called all_checkpoints inside ./NanoDesigner and unzip each file (e.g tar -xzvf ./NanoDesigner/all_checkpoints/DIFFAB.tar.gz). The tested training configurations used in this study are:
 
 **Training Data Variants:**
 - Nanobodies-only
 - Nanobodies + Antibodies
 - Antibodies fine-tuned on Nanobodies
 
-**Clustering Thresholds:**
+**Clustering Thresholds and sequences:**
 - Antigen (Ag) sequence clustering (95%, 80%, 60%)
 - CDRH3 sequence clustering (40%, 30%, 20%)
 
-These configurations systematically assess model performance across:
-1) Different training data compositions
-2) Varying levels of structural diversity (CDRH3 loops)
-3) Different antigenic similarity levels
+The tested configurations systematically assess model performance across different training data compositions, structural diversity levels (via CDRH3 loop clustering thresholds), and antigenic similarity (through varying antigen sequence clustering thresholds).
 
 ### Running Assessments
-To generate evaluation results:
+To replicate our generate evaluation results run:
 ```bash
 ./NanoDesigner/scripts/CDRH3_model_assessment.sh
 ```
@@ -138,14 +135,53 @@ To generate evaluation results:
 #### Variables to update
 * `MODEL`: Select the model to run the inference and evaluation for. Options: "dyMEAN" or "ADESIGN" or "DIFFAB".
 * `BASE_DIR`: Your working directory (`./NanoDesigner/Tool_assesment_experiment_1`).
-* `FINETUNE`: Set to False if you want to evalaute either Nanobody; Nanobody_Antibody; set tot TRUE to automatically search for the fine-tuned models.
-* `TOTAL_FOLDS`: For Supplementary material tables S2 and S2 set to 0, for Main Text Table 1, set to 9.
-* `CLUSTER_TYPE`: Selet set Ag or CDRH3 depending on the sequence to cluster from.
+* `FINETUNE`: Set to False if you want to evalaute either Nanobody; Nanobody_Antibody; set to TRUE to automatically search for the fine-tuned models.
+* `TOTAL_FOLDS`: For Supplementary material tables S2 and S2 set to 0, for Main Text Table 1, set to 9 (thresholds 60% for Ag, 40% for CDRH#) .
+* `CLUSTER_TYPE`: Select "Ag" or "CDRH3" depending on the sequence to cluster from.
 * `CLUSTER_THRESHOLD`: Set 95, 80 or 60 for Ag and 40, 30 or 20 for CDRH3.
 
 
 ### Checkpoints
-Download the zip file from the following link [here](https://drive.google.com/drive/folders/1SZUP4ovqYtHjxIQSJ4-UoO60wW3YN-lj?usp=share_link) and upzip it inside `./NanoDesigner`. The `./NanoDesigner/scripts/CDRH3_model_assessment.sh` will autoamtically locate the trained checkpoints for each tool and training configuration.
+The `./NanoDesigner/scripts/CDRH3_model_assessment.sh` will autoamtically locate the trained checkpoints for each tool and training configuration as long as the directory structure is respected as in [here](https://drive.google.com/drive/folders/1SZUP4ovqYtHjxIQSJ4-UoO60wW3YN-lj?usp=share_link)
+
+```
+all_checkpoints/
+├── ADESIGN/
+│   ├── Antibody_clustered_Ag_60/
+│   │   └── fold_0/
+│   │       └── best.ckpt
+│   ├── Antibody_clustered_Ag_80/
+│   ├── Antibody_clustered_Ag_95/
+│   ├── Antibody_clustered_CDRH3_20/
+│   ├── Antibody_clustered_CDRH3_30/
+│   ├── Antibody_clustered_CDRH3_40/
+│   ├── Nanobody_Antibody_clustered_Ag_60/
+│   ├── Nanobody_Antibody_clustered_Ag_60_3CDRs/
+│   ├── Nanobody_Antibody_clustered_Ag_80/
+│   ├── Nanobody_Antibody_clustered_Ag_95/
+│   ├── Nanobody_Antibody_clustered_CDRH3_20/
+│   ├── Nanobody_Antibody_clustered_CDRH3_30/
+│   ├── Nanobody_Antibody_clustered_CDRH3_40/
+│   ├── Nanobody_clustered_Ag_60/
+│   ├── Nanobody_clustered_Ag_80/
+│   ├── Nanobody_clustered_Ag_95/
+│   ├── Nanobody_clustered_CDRH3_20/
+│   ├── Nanobody_clustered_CDRH3_30/
+│   └── Nanobody_clustered_CDRH3_40/
+├── DIFFAB/
+│   ├── Antibody_clustered_Ag_60/
+│   │   └── fold_0/
+│   │       └── 200000.pt
+│   └── ... (same subfolders as ADESIGN)
+└── dyMEAN/
+    ├── Antibody_clustered_Ag_60/
+    │   └── fold_0/
+    │       └── version_0/
+    │           └── checkpoint/
+    │               └── epoch144_step49590.ckpt
+    └── ... (same subfolders as ADESIGN)
+
+```
 
 ### Results Analysis
 The performance measures presented in:
