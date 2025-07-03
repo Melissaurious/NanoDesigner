@@ -60,7 +60,7 @@ g++ -static -O3 -ffast-math -lm -o evaluation/TMscore evaluation/TMscore.cpp
 
 ## Data Download and Preprocess
 
-The data download and preparation steps are necessary to replicate our data processing, filtering, and preparation for training. All required instructions are included in the following scripts.
+The data download and preparation steps are necessary to replicate our data processing, filtering, and preparation for training and inference. All required instructions are included in the following scripts.
 
 ### 1. Preprocess the Data
 Use the `download_and_process_data_reduced.py` script to download SAbDab structures, extract CDR information, and analyze antibody-antigen interactions based on solvent-accessible surface area (dSASA).
